@@ -1,1 +1,1 @@
-# NASTECH AI internship
+# more projects coming soon!
