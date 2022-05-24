@@ -1,1 +1,1 @@
-# AI internship
+# NASTECH AI internship
