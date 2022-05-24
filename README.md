@@ -1,1 +1,1 @@
-# internship
+# AI internship
