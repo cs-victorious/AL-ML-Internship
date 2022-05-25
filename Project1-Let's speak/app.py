@@ -69,17 +69,19 @@ def main():
                 submit_button = st.form_submit_button("Convert")
 
             if submit_button:
-                st.success("Results")
-                st.write("Original::{}".format(raw_text))
-                if leet_choice == "GreekLeet":
-                    results = greek_leet_converter(raw_text)
-                else:
-                    results = leet_converter(raw_text)
-                    st.code(results)
+                with col2:
+                    st.success("Results")
+                    st.write("Original text: {}".format(raw_text))
+                    if leet_choice == "GreekLeet":
+                        results = greek_leet_converter(raw_text)
+                    else:
+                        results = leet_converter(raw_text)
 
-        with col2:
-            with st.expander("Visualize"):
-                plot_wordcloud(raw_text)  # works for only alphabet
+                    st.code(results)
+                    with st.expander("Visualize"):
+                        plot_wordcloud(raw_text)  # works for only alphabet
+        st.markdown('#')
+        st.markdown('#')
         st.markdown('#')
         st.markdown('#')
 
@@ -91,16 +93,13 @@ def main():
                 submit_button = st.form_submit_button("Phonetize")
 
             if submit_button:
-                st.success("Results")
-                st.write("Original:: {}".format(raw_text))
-                results = get_natophonetics(raw_text)
-                st.code(results)
-
-        with col4:
-            with st.expander("Visualize"):
-                plot_wordcloud(results)
-        st.markdown('#')
-        st.markdown('#')
+                with col4:
+                    st.success("Results")
+                    st.write("Original:: {}".format(raw_text))
+                    results = get_natophonetics(raw_text)
+                    st.code(results)
+                    with st.expander("Visualize"):
+                        plot_wordcloud(results)
 
     else:
         st.subheader("About")
@@ -116,3 +115,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
