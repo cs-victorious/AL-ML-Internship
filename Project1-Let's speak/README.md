@@ -1,6 +1,6 @@
 # Let's speak
 
-A streamlit app that is capable of translating normal texts to leet texts and nato phonetic alphabets with visualization. 
+A streamlit app that is capable of translating normal texts to leet texts and nato phonetic alphabets with visualization completely developed with python.
 
 ![image](https://user-images.githubusercontent.com/58178421/170161711-a70fed4b-590d-4884-aaee-d2b40ab0fbd2.png)
 
